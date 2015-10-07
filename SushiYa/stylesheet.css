@@ -54,6 +54,10 @@
 .jumbotron {
 	background: url(http://cdn.phillymag.com/wp-content/uploads/2013/02/yakitori-boy-valentines-sushi.jpg) no-repeat center center;
 	background-size: cover;
+	height: 700px;
+	margin-top: 20px;
+	clear: both;
+	margin-bottom: -80px;
 }
 
 .delivery {
@@ -89,7 +93,6 @@
 }
 
 .col {
-	width: 50%;
 	font-family: sans-serif;
 	text-align: center;
 	display: inline-block;
@@ -97,10 +100,10 @@
 
 .destaques {
 	background-color: #333;
-	color: #fff;
+	color: #FFF;
 	text-align: center;
 	font-family: sans-serif;
-	padding: 1px 0px;
+	padding: 6px 0px;
 	margin-bottom: 20px;
 	clear: both;
 	display: block;
