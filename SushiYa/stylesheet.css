@@ -6,7 +6,7 @@
 .header {
 	width: 100%;
 	height: 30%;
-	display: block;
+
 }
 
 .logo {
@@ -49,6 +49,11 @@
 .nav li a:hover {
 	font-weight: 790;
 	color: #E81919;
+}
+
+.jumbotron {
+	background: url(http://cdn.phillymag.com/wp-content/uploads/2013/02/yakitori-boy-valentines-sushi.jpg) no-repeat center center;
+	background-size: cover;
 }
 
 .delivery {
@@ -153,6 +158,7 @@
 	border-left-color: #E81919;
 	border-left-style: solid
 }
+
 footer {
 	background-color: #e6e6e6;
 	color: #333;
@@ -166,6 +172,7 @@ footer {
 	padding-bottom: 4px;
 	padding-top: 2px;
 }
+
 footer p {
 	margin-left: 10px;
 }
