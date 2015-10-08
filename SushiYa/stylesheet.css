@@ -6,7 +6,6 @@
 .header {
 	width: 100%;
 	height: 30%;
-
 }
 
 .logo {
@@ -14,31 +13,28 @@
 }
 
 .logo img {
-	margin: -30px 0px 10px 30px;
+	margin: -30px 0px 30px 30px;
 	max-width: 300px;
 	max-height: 239px;
 	min-width: 150px;
 	min-height: 115px;
 	width: 80%;
-	height: 70%;
+	height: 80%;
 	display: block;
-}
-
-.nav {
-	margin: auto;
 }
 
 .nav li {
 	display: inline;
-	list-style-type: none;	
+	list-style-type: none;
 }
 
 .nav li a {
+	text-align: center;
 	color: #5a5a5a;
 	text-transform: uppercase;
 	text-decoration: none;
 	font-weight: 700;
-	font-size: 12px;
+	font-size: 14px;
 	font-family: sans-serif;
 	margin-right: 25px;
 	letter-spacing: 0.7px;
@@ -88,14 +84,30 @@
 
 .container {
 	float: left;
-	padding-bottom: 20px;
-	display: inline;
+	color: #fff;
+	padding: 20px 0px 0px 50px;
+	font-family: Helvetica sans-serif;
+	font-weight: 900;
+	font-size: 22px;
+	line-height: 24px;
+	letter-spacing: 4px;
 }
 
-.col {
-	font-family: sans-serif;
+.amor {
+	color: #FFACCD;
+}
+
+.col img {
 	text-align: center;
-	display: inline-block;
+	display: block;
+	margin: 0px auto;
+	margin-top: 60px;
+	min-width: 150px;
+	max-width: 3500px;
+	min-height: 120px;
+	max-height: 2600px;
+	width: 70%;
+	height: 30%;
 }
 
 .destaques {
@@ -103,8 +115,9 @@
 	color: #FFF;
 	text-align: center;
 	font-family: sans-serif;
+	font-size: 28px;
 	padding: 6px 0px;
-	margin-bottom: 20px;
+	margin-bottom: -60px;
 	clear: both;
 	display: block;
 }
@@ -117,20 +130,24 @@
 	padding: 1px 0px;
 	margin-bottom: 20px;
 	clear: both;
+	margin-top: 80px;
 }
 
 .botao {
 	font-family: sans-serif;
-	text-align: center;
-	border: solid 1.5px #333;
-	border-radius: 4px;
 	padding: 14px 40px;
-	letter-spacing: 0.8px;
-	font-size: 14px;
+	letter-spacing: 1px;
+	font-size: 42px;
 	font-weight: 600;
 	text-decoration: none;
-	color: #005c1f;
-	background-color: #e6e6e6;
+	color: #333;
+	clear: both;
+	display: block;
+	text-align: center;
+	margin: 8px auto;
+	border-bottom-width: 2px;
+	border-bottom-color: #333;
+	border-bottom-style: solid
 }
 
 .botao:hover {
@@ -143,6 +160,18 @@
 	font-family: sans-serif;
 	display: block;
 	border-top:
+}
+
+.formulario h3 {
+	font-family: sans-serif;
+	color: #333;
+	display: block;
+	padding: 0px 15% 0px 20px;
+	background-color: #fff;
+	margin-left: 10%;
+	border-left-width: 2px;
+	border-left-color: #E81919;
+	border-left-style: solid
 }
 
 .mensagem {
@@ -160,6 +189,22 @@
 	border-left-width: 2px;
 	border-left-color: #E81919;
 	border-left-style: solid
+}
+
+.content {
+	display: block;
+	padding: 40px;
+	margin: 40px;
+	clear: both;
+}
+
+.sushi img {
+	width: 30%;
+	min-width: 300px;
+	min-height: 20px;
+	max-width: 3000px;
+	max-height: 2000px;
+	margin: 10px;
 }
 
 footer {
