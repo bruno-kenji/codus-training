@@ -2,7 +2,7 @@
 	width: 325px;
 	width: 310px;
 	height: 460px;
-	margin: 10px auto;
+	margin: 15px auto;
 	padding: 5px;
 	border-radius: 10px;
 	color: #fff;
@@ -14,7 +14,6 @@
 	height: 70px;
     width: 300px;
     margin: auto;
-    background: ;
     margin-bottom: 5px;
     text-align: right;
     font-size: 60px;
@@ -33,15 +32,22 @@
 	text-align: center;
 	font-size: 39px;
 	padding: 2px;
-	margin: 5px 6px;
+	margin: 5px 8px;
 	background: #707070;
 	border-radius: 10px;
+	border: 1px outset black;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+.operators span:active {
+	border: 2px solid red;
 }
 
 .numbers span {
 	display: block;
-	width: 50px;
-	height: 50px;
+	width: 70px;
+	height: 70px;
 	float: left;
 	text-decoration: none;
 	color: black;
@@ -51,8 +57,28 @@
 	margin: 5px 15px;
 	background: #707070;
 	border-radius: 10px;
+	box-sizing: border-box;
+	cursor: pointer;
+	border: 1px solid black;
 }
 
+.numbers span:active {
+	border: 2px solid red;
+}
+
+.numbers .clear {
+	color: #005A00;
+}
+
+.operators .igual {
+	color: #00003D;
+}
 .numbers, .operators {
 	margin: 0;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
