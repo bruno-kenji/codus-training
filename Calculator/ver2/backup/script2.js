@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var displayFix = function(number) {
         if (number.length > 9) {
-            total.text(number.substr(number.length-9,9));
+            total.text(number.substr(0,9));
         }
     };
     var number = "";
@@ -15,6 +15,15 @@ $(document).ready(function(){
         total.text(number);
         displayFix(number);
     });
+    $(".dot").click(function() {
+        if ( number.length == 0)     
+    { number = "0.";
+    } else {
+        number += $(this).text();
+        total.text(number);
+        displayFix(number);
+    };
+    });
     $(".operators span").not(".igual").click(function(){
         operator = $(this).text();
         newnumber = number;
@@ -24,33 +33,22 @@ $(document).ready(function(){
     $(".clear").click(function(){
         number = "";
         total.text("0");
-        if ($(this).attr("id") === "clearall") {
-            newnumber = "";
-        }
+        newnumber = "";
     });
     $(".igual").click(function(){
         if (operator === "+"){
-            number = (parseInt(newnumber,10) + parseInt(number, 10)).toString(10);
+            number = (parseFloat(newnumber,10) + parseFloat(number,10)).toString(10);
         } else if (operator === "-"){
-            number = (parseInt(newnumber, 10) - parseInt(number,10)).toString(10);
+            number = (parseFloat(newnumber,10) - parseFloat(number,10)).toString(10);
         } else if (operator === "/"){
-            number = (parseInt(newnumber, 10) / parseInt(number,10)).toString(10);
+            number = (parseFloat(newnumber,10) / parseFloat(number,10)).toString(10);
         } else if (operator === "*"){
-            number = (parseInt(newnumber, 10) * parseInt(number,10)).toString(10);
+            number = (parseFloat(newnumber,10) * parseFloat(number,10)).toString(10);
         }
         total.text(number);
         displayFix(number);
         number = "";
         newnumber = "";
-    });
-    $(".dot").click(function() {
-        if ( number.length == 0)     
-    { number = "0.";
-    } else
-    {  if ( number.indexOf(".") == -1)
-         { number = number + ".";
-    };   };
-  total.text(number);
     });
         $(document).keypress(function(event){
         var keycode = (event.keyCode ? event.keyCode : event.which);
@@ -74,7 +72,7 @@ $(document).ready(function(){
             $("#num9").click();
         } else if (keycode === 48) {
             $("#num0").click();
-        } else if (keycode === 99 || keycode === 127 || keycode === 08) {
+        } else if (keycode === 99 || keycode === 127 || keycode === 8) {
             $(".clear").click();
         } else if (keycode === 46) {
             $(".dot").click();
