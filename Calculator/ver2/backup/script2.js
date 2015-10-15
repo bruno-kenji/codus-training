@@ -1,56 +1,61 @@
 $(document).ready(function(){
-    var displayFix = function(number) {
-        if (number.length > 9) {
-            total.text(number.substr(0,9));
+    var displayFix = function(num) {
+        if (num.length > 9) {
+            total.text(num.substr(0,9));
         }
     };
     var number = "";
-    var newnumber = "";
+    var newNumber = "";
     var operator = "";
     var total = $(".display");
     total.text("0");
 
-    $(".numbers span").not(".clear, .dot").click(function(){
+    $(".numbers span").not(".clear, .dot").click(function() {
         number += $(this).text();
         total.text(number);
         displayFix(number);
     });
+
     $(".dot").click(function() {
-        if ( number.length == 0)     
-    { number = "0.";
-    } else {
-        number += $(this).text();
-        total.text(number);
-        displayFix(number);
-    };
+        if (number == "") {
+            number = "0.";
+        } else {
+            number += $(this).text();
+            total.text(number);
+            displayFix(number);
+        };
     });
-    $(".operators span").not(".igual").click(function(){
+
+    $(".operators span").not(".igual").click(function() {
         operator = $(this).text();
-        newnumber = number;
+        newNumber = number;
         number = "";
         total.text("0");
     });
-    $(".clear").click(function(){
+
+    $(".clear").click(function() {
         number = "";
         total.text("0");
-        newnumber = "";
+        newNumber = "";
     });
-    $(".igual").click(function(){
+
+    $(".igual").click(function() {
         if (operator === "+"){
-            number = (parseFloat(newnumber,10) + parseFloat(number,10)).toString(10);
+            number = (parseFloat(newNumber,10) + parseFloat(number,10)).toString(10);
         } else if (operator === "-"){
-            number = (parseFloat(newnumber,10) - parseFloat(number,10)).toString(10);
+            number = (parseFloat(newNumber,10) - parseFloat(number,10)).toString(10);
         } else if (operator === "/"){
-            number = (parseFloat(newnumber,10) / parseFloat(number,10)).toString(10);
+            number = (parseFloat(newNumber,10) / parseFloat(number,10)).toString(10);
         } else if (operator === "*"){
-            number = (parseFloat(newnumber,10) * parseFloat(number,10)).toString(10);
+            number = (parseFloat(newNumber,10) * parseFloat(number,10)).toString(10);
         }
         total.text(number);
         displayFix(number);
         number = "";
-        newnumber = "";
+        newNumber = "";
+
     });
-        $(document).keypress(function(event){
+        $(document).keypress(function(event) {
         var keycode = (event.keyCode ? event.keyCode : event.which);
         if (keycode === 49) {
             $("#num1").click();
