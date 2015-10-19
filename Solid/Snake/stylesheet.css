@@ -12,9 +12,11 @@ letter-spacing: 0.7px;
 	text-align: center;
 	padding-top: 10px; 
 	font-weight: 900;
+	font-family: sans-serif;
+	color: #333;
 }
 
-#record {
+#records {
 	z-index:2; 
 	position:absolute; 
 	background-color:#ddd; 
