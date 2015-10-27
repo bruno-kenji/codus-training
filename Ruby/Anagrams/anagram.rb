@@ -10,15 +10,15 @@ def combine_anagrams(words)
 			formatted_next_word = next_word.downcase.split("").sort
 
 			if (formatted_word == formatted_next_word)
-			array_of_words.push(word)
+			array_of_words.push(next_word)
 			end
 		end
 		array_of_anagrams.push(array_of_words)
 	end
-	return array_of_anagrams
+	return array_of_anagrams.uniq
 end
 
-words = ['cars', 'for', 'potatoes', 'Racs', 'four','scar', 'creams',
-'Scream']
+words = [ 'cars', 'for', 'potatoes', 'Racs', 'four','scar', 'creams',
+'Scream', 'Mearsc' ]
 print combine_anagrams(words)
 puts " "
