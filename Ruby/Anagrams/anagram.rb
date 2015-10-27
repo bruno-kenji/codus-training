@@ -20,5 +20,4 @@ end
 
 words = [ 'cars', 'for', 'potatoes', 'Racs', 'four','scar', 'creams',
 'Scream', 'Mearsc' ]
-print combine_anagrams(words)
-puts " "
+print combine_anagrams(words), "\n"

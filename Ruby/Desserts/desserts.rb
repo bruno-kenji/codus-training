@@ -65,5 +65,5 @@ treco_ruim = JellyBean.new('jujuba', 180, "black licorice")
 treco_ruim.healthy?
 treco_ruim.delicious?
 
-puts comida.name, "Healthy? ", comida.healthy_answer, "Delicious?", comida.delicious_answer, "\n"
-puts treco_ruim.name, "Healthy? ", treco_ruim.healthy_answer, "Delicious?", treco_ruim.delicious_answer
+puts "--- #{comida.name} ---", "-> Healthy? ", comida.healthy_answer, "-> Delicious?", comida.delicious_answer, "\n"
+puts "--- #{treco_ruim.name} ---", "-> Healthy? ", treco_ruim.healthy_answer, "-> Delicious?", treco_ruim.delicious_answer
