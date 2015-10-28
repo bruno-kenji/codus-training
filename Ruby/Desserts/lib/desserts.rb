@@ -18,7 +18,7 @@ class Dessert
 		end
 
 	def healthy?
-		return true unless calories >= 200
+		return true unless calories >= 200 else return false
 	end
 
 	def delicious?
@@ -53,7 +53,7 @@ class JellyBean < Dessert
 		end
 
 	def delicious?
-		return true unless self.flavor == "black licorice"
+		return true unless self.flavor == "black licorice" else return false
 	end
 end
 
