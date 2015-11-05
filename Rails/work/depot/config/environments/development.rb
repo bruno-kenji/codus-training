@@ -41,5 +41,5 @@ Rails.application.configure do
 end
 
 Depot::Application.configure do
-  config.action_mailer.delivery_method = :test
+  config.action_mailer.delivery_method = :test  
 end
