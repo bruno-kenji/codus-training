@@ -7,7 +7,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body class = "<%= controller.controller_name %>">
-	
 	<div id="banner">
 		<%= image_tag("logo.png") %>
 		<%= @page_title || "Pragmatic Bookshelf" %>
@@ -15,13 +14,17 @@
 	<div id = "columns">
 		<div id = "side">
 			<div id="cart">
+				<% if @cart %>
+					<%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
 				<%= render @cart %>
+		<% end %>
+	<% end %>
 			</div>
 			<ul>
-				<li><a href="localhost:3000/">Home</a></li>
-				<li><a href="localhost:3000/faq">Questions</a></li>
-				<li><a href="localhost:3000/news">News</a></li>
-				<li><a href="localhost:3000/contact">Contact</a></li>
+				<li><a href="http://www..../">Home</a></li>
+				<li><a href="http://www..../faq">Questions</a></li>
+				<li><a href="http://www..../news">News</a></li>
+				<li><a href="http://www..../contact">Contact</a></li>
 			</ul>
 		</div>
 	<div id="main">
